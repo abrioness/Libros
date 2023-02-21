@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { NavController } from '@ionic/angular';
 
 import { ApiAppService } from '../api-app.service';
 
@@ -13,20 +12,27 @@ export class LibroPage implements OnInit {
 ListBooks:any;
 arraybook=[];
 
-  constructor(public nvctl:NavController,public service:ApiAppService) { }
+
+  constructor(public service:ApiAppService) { }
 
   ngOnInit() {
     this.getData();
   }
 
 
+  ionViewWillEnter(){
+    this.getData();
+  }
+
   getData()
   {
     this.service.getPosts().then(data=>{
-          this.ListBooks=data;
-          console.log(this.ListBooks.response);
+    this.ListBooks=data;
+    
+   
   });
 
-
 }
+
+
 }

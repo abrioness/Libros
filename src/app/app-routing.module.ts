@@ -8,15 +8,20 @@ const routes: Routes = [
     redirectTo: 'libro',
     pathMatch: 'full'
   },
-  
-  {
-    path: 'cliente',
-    loadChildren: () => import('./cliente/cliente.module').then( m => m.ClientePageModule)
-  },
   {
     path: 'libro',
     loadChildren: () => import('./libro/libro.module').then( m => m.LibroPageModule)
   },
+  
+  {
+    path: 'cliente',
+    loadChildren: () => import('./cliente/cliente.module').then( m => m.ClientePageModule)
+  },  {
+    path: 'reg-lib',
+    loadChildren: () => import('./reg-lib/reg-lib.module').then( m => m.RegLibPageModule)
+  },
+
+  
 
 ];
 

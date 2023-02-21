@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ComponentFactory, OnInit } from '@angular/core';
+import { ApiAppService } from '../api-app.service';
 
 @Component({
   selector: 'app-cliente',
@@ -7,9 +8,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClientePage implements OnInit {
 
-  constructor() { }
+
+  data=
+  {
+    id:0,
+   nombre:"",
+    apellidos:"",
+    correo:"",
+    contacto:""
+
+  };
+  constructor(public service:ApiAppService) { }
 
   ngOnInit() {
   }
+
+  async Registrar()
+  {
+    
+    this.service.addPost(this.data);
+    
+  }
+  
 
 }

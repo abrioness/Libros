@@ -10,7 +10,7 @@
     <ion-label>
       Nombre
     </ion-label>
-    <ion-input type="text"></ion-input>
+    <ion-input type="text" [(ngModel)]="data.nombre"></ion-input>
   </ion-card>
 </ion-item>
 <ion-item>
@@ -18,7 +18,7 @@
     <ion-label>
       Apellidos
     </ion-label>
-    <ion-input type="text"></ion-input>
+    <ion-input type="text" [(ngModel)]="data.apellidos"></ion-input>
   </ion-card>
 </ion-item>
 <ion-item>
@@ -26,7 +26,7 @@
     <ion-label>
       Correo
     </ion-label>
-    <ion-input type="text"></ion-input>
+    <ion-input type="text" [(ngModel)]="data.correo"></ion-input>
   </ion-card>
 </ion-item>
 <ion-item>
@@ -34,20 +34,13 @@
     <ion-label>
       Contacto
     </ion-label>
-    <ion-input type="text"></ion-input>
+    <ion-input type="text" [(ngModel)]="data.contacto"></ion-input>
   </ion-card>
 </ion-item>
-<ion-item>
-  <ion-card>
-    <ion-label>
-      Tarjeta
-    </ion-label>
-    <ion-input type="text"></ion-input>
-  </ion-card>
-</ion-item>
+
 <ion-item>
   <ion-card>    
-   <ion-button  color="success"  routerLink="/libro">
+   <ion-button  color="success"  (click)="Registrar()">
     <ion-icon name="save"></ion-icon>
     Registrar
     </ion-button> 

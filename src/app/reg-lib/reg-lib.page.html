@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Registra Libro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-item>
+  <ion-card>
+    <ion-label>
+      Nombre del Libro
+    </ion-label>
+    <ion-input type="text" [(ngModel)]="data.nomLib"></ion-input>
+  </ion-card>
+</ion-item>
+<ion-item>
+  <ion-card>
+    <ion-label>
+      Cantidad
+    </ion-label>
+    <ion-input type="text" [(ngModel)]="data.cantidad"></ion-input>
+  </ion-card>
+</ion-item>
+<ion-item>
+  <ion-card>
+    <ion-label>
+      Precio
+    </ion-label>
+    <ion-input type="text" [(ngModel)]="data.precio"></ion-input>
+  </ion-card>
+</ion-item>
+
+<ion-item>
+  <ion-card>    
+   <ion-button  color="success"  (click)="GuarReg()">
+    <ion-icon name="save"></ion-icon>
+    Registrar
+    </ion-button> 
+  </ion-card>
+</ion-item>
+</ion-content>

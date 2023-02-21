@@ -1,7 +1,8 @@
 {
   "name": "Libros",
   "integrations": {
-    "capacitor": {}
+    "capacitor": {},
+    "cordova": {}
   },
   "type": "angular"
 }
