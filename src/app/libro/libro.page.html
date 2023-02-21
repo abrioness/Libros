@@ -7,16 +7,17 @@
 <ion-content [fullscreen]="true" class="ion-padding" >
 
   <ion-list>
-    <ion-item >
+    <ion-item *ngFor="let list of ListBooks.response" >
       <ion-avatar>         
         <ion-img src="../../assets/imag/book.jpg" alt="Book"></ion-img>
       </ion-avatar>
-      <!-- <ion-card>
-        Libro:{{books.nomLib}}
-        Cantidad:{{books.cantidad}}
-        Precio:C$ {{books.precio}}
-      </ion-card> -->
-      <ion-button routerlink="/cliente" slot="end">
+       <ion-card>
+        
+       Libro: {{list.nomLib}}
+       Cantidad:{{list.cantidad}}
+       Precio:C$ {{list.precio}}
+      </ion-card>
+      <ion-button routerLink="/cliente" slot="end">
         <ion-icon slot="start" name="cart-outline"></ion-icon>
         Comprar
       </ion-button>
